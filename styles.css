@@ -1,0 +1,132 @@
+body{
+   
+    padding: 0px;
+    margin: 0px;
+    background-color:darkgray;
+}
+.container{
+    display: flex;
+}
+.todo-list{
+    padding:15px;
+    width: 400px;
+   max-height: 100%;
+    min-height: 240px;
+    background-color: white;
+    margin: 100px auto;  
+    
+}
+.todo-list img{
+    width:28px;
+    height:30px;
+  margin-right:2px;
+}
+.todo-list h2{
+    color:midnightblue
+}
+.todo-list{
+    background-color: rgb(205, 199, 171);
+}
+input#text{
+    width:300px;
+    height:33px;
+    border-radius: 50px;
+    background-color: rgb(231, 219, 219);
+    border: none;
+    padding-left:10px;
+}
+button{
+    color:white;
+    background-color: darkorange ;
+    border-radius: 80px;
+    width: 65px;
+    height:33px;
+    padding: 5px;
+    border:none;
+    margin-right:5px;
+
+}
+ #list-item{
+    list-style-type: none;
+    padding:10px 20px;
+    margin:10px;
+
+ }
+
+
+.line{
+    text-decoration: line-through;
+}
+.hello{
+    width:20px;
+    height:20px;
+}
+ .change{
+    width:10px;
+    height:10px;
+    font-weight: bolder;
+    position:absolute;
+    right:10px;
+    padding-left:280px;
+ }
+ul li{
+    font-family:monospace;
+    font-size: larger;
+    list-style-type: none;
+    cursor:pointer;
+    user-select:none;
+    content: none;
+    position: relative;
+    padding:8px 26px 10px ; 
+    
+}
+ul li::before{
+    border:1px solid #f2f2f2;
+    content: '';
+    background-image: url(images/unchecked.png);
+    width:20px;
+    height:20px;
+    top:6px;
+    left:0.1px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: absolute; 
+   
+}
+
+ul li.checked{ 
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+    color:#555;
+}
+@media screen and (min-width:250px) and(max-width:304px){
+    .todo-list{
+        width:210px;
+
+    }
+    input#text{
+        width:120px;
+    }
+}
+@media screen and (min-width:305px) and(max-width:400px){
+    .todo-list{
+        width:270px;
+
+    }
+    input#text{
+        width:180px;
+    }
+}
+@media screen and (min-width:401px) and(max-width:440px){
+    .todo-list{
+        width:330px;
+
+    }
+    input#text{
+        width:260px;
+    }
+}
